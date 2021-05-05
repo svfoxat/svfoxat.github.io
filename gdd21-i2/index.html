@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Minimal Classic Game</title>
+  </head>
+  <body style="text-align: center">
+    <h1>more juice in the standalone version <a href="/gdd2-i2/standalone/standalone.zip">here.</a></h1>
+    <p><i>Nico Nößler, 01431141</i></p>
+    <canvas id="unity-canvas" width=960 height=600 style="width: 960px; height: 600px; background: #231F20"></canvas>
+    <script src="/gdd2-i2/Build/docs.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "/gdd2-i2/Build/docs.data",
+        frameworkUrl: "/gdd2-i2/Build/docs.framework.js",
+        codeUrl: "/gdd2-i2/Build/docs.wasm",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "GameLabGraz",
+        productName: "Minimal Classic Game",
+        productVersion: "1.0.1",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+  </body>
+</html>
